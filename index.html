@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <title>Generador de memes</title>
 </head>
 <body>
@@ -13,200 +14,206 @@
 <main class="all-container">
     <header class="header">
         <nav class="nav-buttons">
-            <h1>Generador de memes</h1>
+            <h1 class="nav-tittle">Generador de memes</h1>
 
-            <button class="button-image">Imagen</button>
-            <button class="button-text">Texto</button>
-            <button class="button-darkmode">Modo oscuro</button>
+            <div class="buttons-nav">
+                <button class="button-image">Imagen</button>
+                <button class="button-text">Texto</button>
+                <button class="button-darkmode">Modo oscuro</button>
+            </div>
         </nav>
     </header>
     
     <section class="container-section">
 
-        <article class="top-text">TOP TEXT</article>
-        <article class="center-text"></article>
-        <article class="bottom-text">BOTTOM TEXT</article>
-
+        <div class="container-buttons-nav">
+            <article class="top-text">TOP TEXT</article>
+            <article class="center-text"></article>
+            <article class="bottom-text">BOTTOM TEXT</article>
+          </div>
     </section>
 
-                <!-- Panel de filtros de imagen -->
-
-    <aside class="panel-image">
-        <section class="section-panel-image">
-            <h2 class="tittle-panel-image">IMAGEN</h2>
-                <div class="control-panel">
-                    <h3 class="control-panel-tittle">URL</h3>
-                    <input type="url" class="control-panel-input-url">
-                </div>
-                
-                <div class="control-panel">
-                 <div class="columns-panel">
-                     <div class="control-color">
-                      <label for="color">#FFFFFFF</label>
-                      <input type="color" class="control-panel-input-color">
-                     </div>
-                 </div>
-
-                <div class="columns-panel">
-                    <select id="blendmode-select" class="control-panel-input-blendmode">
-                        <option value="None">Ninguno</option>
-                        <option value="lighten">Aclarar</option>
-                        <option value="darken">Oscurecer</option>
-                        <option value="difference">Diferente</option>
-                        <option value="luminosity">Luminosidad</option>
-                        <option value="multiply">Multiplicar</option>
-                    </select>
-                </div>
-
-                 <div class="control-panel-filters">
-                    <h3 class="control-panel-filters-title-">Filtros</h3>
-                     <div class="control-panel-side">
-                        <label for="bright-slide">BRILLO</label>
-                        <input type="range" id="bright-slide">
-                    </div>
-
-                     <div class="control-panel-side">
-                        <label for="opacity-slide">OPACIDAD</label>
-                        <input type="range" id="opacity-slide">
-                     </div>
-
-                     <div class="control-panel-side">
-                        <label for="contrast-slide">CONTRASTE</label>
-                        <input type="range" id="contrast-slide">
-                     </div>
-
-                    <div class="control-panel-side">
-                         <label for="blur-slide">DESENFOQUE</label>
-                        <input type="range" id="blur-slide">
-                     </div>
-
-                     <div class="control-panel-side">
-                        <label for="grayscale-slide">ESCALA DE GRISES</label>
-                       <input type="range" id="grayscale-slide">
-                    </div>
-
-                    <div class="control-panel-side">
-                        <label for="sepia-slide">SEPIA</label>
-                       <input type="range" id="sepia-slide">
-                    </div>
-
-                    <div class="control-panel-side">
-                        <label for="hue-slide">HUE</label>
-                       <input type="range" id="hue-slide">
-                    </div>
-
-                    <div class="control-panel-side">
-                        <label for="saturate-slide">SATURADO</label>
-                       <input type="range" id="saturate-slide">
-                    </div>
-
-                    <div class="control-panel-side">
-                        <label for="negative-slide">NEGATIVO</label>
-                       <input type="range" id="negative-slide">
-                    </div>
-
-                </div>
-
-                <button class="button-restore">REESTABLECER FILTROS</button>
-
-        </section>
-        
-                    <!-- Panel estilos de texto -->
-
-        <section class="section-panel-text">
-            <h2 class="tittle-panel-text">TEXTO</h2>
-
-            <div class="control-panel-text">
-                <h3 class="control-panel-tittle">SUPERIOR</h3>
-                <label for="top-text">TOP TEXT</label>
-                <textarea name="top-text" id="top-text" ></textarea>
-                <div>
-                    <input id="top-check" type= "checkbox">
-                    <label for="top-check">Sin texto superior</label>
-                </div>
-            </div>
-
-            <div class="control-panel-text">
-                <h3 class="control-panel-tittle">INFERIOR</h3>
-                <label for="top-text">BOTTOM TEXT</label>
-                <textarea name="top-text" id="top-text" ></textarea>
-                <div>
-                    <input id="top-check-2" type= "checkbox">
-                    <label for="top-check-2">Sin texto inferior</label>
-                </div>
-            </div>
-
-            <div class="control-panel">
-                <h3 class="control-panel-tittle">FUENTE</h3>
-                <select id="fontstyle-select" class="control-panel-font">
-                <option value="Arial">Arial</option>
-                <option value="Arial Black">Arial Black</option>
-                <option value="Candara">Candara</option>
-                <option value="Comic Sans">Comic Sans</option>
-                <option value="Helvetica">Helvetica</option>
-                <option value="Impact">Impact</option>
-                <option value="Verdana">Verdana</option>
-                <option value="Times New Roman">Times New Roman</option>
-            </select>
-
-            <input type="number" class="font-size" id="font-size" min="12" value="40">
-
-             <div class="container-button-align">
-                <button class="button-align "></button>
-                <button class="button-align"></button>
-                <button class="button-align"></button>
-             </div>
-            </div>
-
-            <div class="control-panel">
-                <div class="control-panel-columns">
-                    <h3 class="control-panel-tittle">COLOR</h3>
-                     <div class="control-panel-color"></div>
-                     <input type="color" id="color-text-input" value="#000000" >
-                     <span id="text-color">#000000</span>
-                  </div>
-                <div class="control-panel-columns">
-                    <h3 class="control-panel-tittle">FONDO</h3>
-                     <div class="control-panel-color"></div>
-                     <input type="color" id="color-background-text-input" value="#FFFFFFF" >
-                     <span id="text-background-color">#FFFFFFF</span>
-                </div>
-
-                <div class="control-panel-checkbox">
-                    <input id="top-check-transparent" type= "checkbox">
-                    <label for="top-check-transparent">Fondo transparente</label>
-                </div>
-            </div>
-
-            <div class="control-panel">
-                <h3 class="control-panel-tittle">CONTORNO</h3>
-                 <div class="container-button-outline">
-                     <button class="button-outline" id="no-outline-button">Ninguno</button>
-                     <button class="button-outline" id="light-outline-button">Claro</button>
-                     <button class="button-outline" id="dark-outline-button">Oscuro</button>
-                 </div>
-            </div>
-
-            <div class="control-panel">
-                <h3 class="control-panel-tittle">ESPACIADO</h3>
-                <input type="number" id="spacing-input" class="control-panel-input" min="10" max="50" value="30"></input>
-            </div>
-
-            <div class="control-panel">
-                <h3 class="control-panel-tittle">INTERLINEADO</h3>
-                <select id="line-height-select" class="control-panel-input">
-                    <option value="0.8">0.8</option>
-                    <option value="1">1</option>
-                    <option value="1.2">1.2</option>
-                    <option value="1.5">1.5</option>
-                    <option value="2">2</option>
-                    <option value="2.5">2.5</option>
-                </select>
-            </div>
-        </section>
-    </aside>
 </main>
 
     <script src="./app.js"></script>
-</body>
+
+
+
+                <!-- Panel de filtros de imagen -->
+
+     <aside class="panel-image">
+        <section class="section-panel-image">
+             <h2 class="tittle-panel-image">IMAGEN</h2>
+                <div class="control-panel">
+                     <h3 class="control-panel-tittle">URL</h3>
+                        <input type="url" class="control-panel-input-url">
+                </div>
+                            
+                 <div class="control-panel">
+                    <div class="columns-panel">
+                        <div class="control-color">
+                             <label for="color">#FFFFFFF</label>
+                             <input type="color" class="control-panel-input-color">
+                        </div>
+                     </div>
+            
+                    <div class="columns-panel">
+                        <select id="blendmode-select" class="control-panel-input-blendmode">
+                            <option value="None">Ninguno</option>
+                            <option value="lighten">Aclarar</option>
+                            <option value="darken">Oscurecer</option>
+                            <option value="difference">Diferente</option>
+                            <option value="luminosity">Luminosidad</option>
+                            <option value="multiply">Multiplicar</option>
+                        </select>
+                    </div>
+            
+                     <div class="control-panel-filters">
+                         <h3 class="control-panel-filters-title-">Filtros</h3>
+                            <div class="control-panel-side">
+                                <label for="bright-slide">BRILLO</label>
+                                 <input type="range" id="bright-slide">
+                            </div>
+            
+                    <div class="control-panel-side">
+                            <label for="opacity-slide">OPACIDAD</label>
+                             <input type="range" id="opacity-slide">
+                     </div>
+            
+                    <div class="control-panel-side">
+                             <label for="contrast-slide">CONTRASTE</label>
+                             <input type="range" id="contrast-slide">
+                    </div>
+            
+                    <div class="control-panel-side">
+                            <label for="blur-slide">DESENFOQUE</label>
+                             <input type="range" id="blur-slide">
+                    </div>
+            
+                    <div class="control-panel-side">
+                            <label for="grayscale-slide">ESCALA DE GRISES</label>
+                             <input type="range" id="grayscale-slide">
+                    </div>
+            
+                     <div class="control-panel-side">
+                             <label for="sepia-slide">SEPIA</label>
+                             <input type="range" id="sepia-slide">
+                    </div>
+            
+                    <div class="control-panel-side">
+                            <label for="hue-slide">HUE</label>
+                             <input type="range" id="hue-slide">
+                     </div>
+            
+                    <div class="control-panel-side">
+                            <label for="saturate-slide">SATURADO</label>
+                            <input type="range" id="saturate-slide">
+                    </div>
+            
+                    <div class="control-panel-side">
+                            <label for="negative-slide">NEGATIVO</label>
+                            <input type="range" id="negative-slide">
+                    </div>
+            
+                    </div>
+            
+                    <button class="button-restore">REESTABLECER FILTROS</button>
+            
+                </section>
+                    
+                                <!-- Panel estilos de texto -->
+            
+                    <section class="section-panel-text">
+                        <h2 class="tittle-panel-text">TEXTO</h2>
+            
+                        <div class="control-panel-text">
+                            <h3 class="control-panel-tittle">SUPERIOR</h3>
+                            <label for="top-text">TOP TEXT</label>
+                            <textarea name="top-text" id="top-text" ></textarea>
+                            <div>
+                                <input id="top-check" type= "checkbox">
+                                <label for="top-check">Sin texto superior</label>
+                            </div>
+                        </div>
+            
+                        <div class="control-panel-text">
+                            <h3 class="control-panel-tittle">INFERIOR</h3>
+                            <label for="top-text">BOTTOM TEXT</label>
+                            <textarea name="top-text" id="top-text" ></textarea>
+                            <div>
+                                <input id="top-check-2" type= "checkbox">
+                                <label for="top-check-2">Sin texto inferior</label>
+                            </div>
+                        </div>
+            
+                        <div class="control-panel">
+                            <h3 class="control-panel-tittle">FUENTE</h3>
+                            <select id="fontstyle-select" class="control-panel-font">
+                            <option value="Arial">Arial</option>
+                            <option value="Arial Black">Arial Black</option>
+                            <option value="Candara">Candara</option>
+                            <option value="Comic Sans">Comic Sans</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="Impact">Impact</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                        </select>
+            
+                        <input type="number" class="font-size" id="font-size" min="12" value="40">
+            
+                         <div class="container-button-align">
+                            <button class="button-align "></button>
+                            <button class="button-align"></button>
+                            <button class="button-align"></button>
+                         </div>
+                        </div>
+            
+                        <div class="control-panel">
+                            <div class="control-panel-columns">
+                                <h3 class="control-panel-tittle">COLOR</h3>
+                                 <div class="control-panel-color"></div>
+                                 <input type="color" id="color-text-input" value="#000000" >
+                                 <span id="text-color">#000000</span>
+                              </div>
+                            <div class="control-panel-columns">
+                                <h3 class="control-panel-tittle">FONDO</h3>
+                                 <div class="control-panel-color"></div>
+                                 <input type="color" id="color-background-text-input" value="#FFFFFFF" >
+                                 <span id="text-background-color">#FFFFFFF</span>
+                            </div>
+            
+                            <div class="control-panel-checkbox">
+                                <input id="top-check-transparent" type= "checkbox">
+                                <label for="top-check-transparent">Fondo transparente</label>
+                            </div>
+                        </div>
+            
+                        <div class="control-panel">
+                            <h3 class="control-panel-tittle">CONTORNO</h3>
+                             <div class="container-button-outline">
+                                 <button class="button-outline" id="no-outline-button">Ninguno</button>
+                                 <button class="button-outline" id="light-outline-button">Claro</button>
+                                 <button class="button-outline" id="dark-outline-button">Oscuro</button>
+                             </div>
+                        </div>
+            
+                        <div class="control-panel">
+                            <h3 class="control-panel-tittle">ESPACIADO</h3>
+                            <input type="number" id="spacing-input" class="control-panel-input" min="10" max="50" value="30"></input>
+                        </div>
+            
+                        <div class="control-panel">
+                            <h3 class="control-panel-tittle">INTERLINEADO</h3>
+                            <select id="line-height-select" class="control-panel-input">
+                                <option value="0.8">0.8</option>
+                                <option value="1">1</option>
+                                <option value="1.2">1.2</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                                <option value="2.5">2.5</option>
+                            </select>
+                        </div>
+                    </section>
+                </aside>
+            </body>   
 </html>
