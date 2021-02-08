@@ -42,17 +42,20 @@
                 <!-- Panel de filtros de imagen -->
 
      <aside class="panel-image">
-        <section class="section-panel-image">
+        <section class="section-panel-image" style="display: none;">
              <h2 class="tittle-panel-image">IMAGEN</h2>
                 <div class="control-panel">
                      <h3 class="control-panel-tittle">URL</h3>
                         <input type="url" class="control-panel-input-url">
                 </div>
+
+               <div class="container-fondo">
+                   <h3 class="control-panel-tittle">FONDO</h3>
                             
                  <div class="control-panel">
                     <div class="columns-panel">
                         <div class="control-color">
-                             <label for="color">#FFFFFFF</label>
+                             <label for="color"></label>
                              <input type="color" class="control-panel-input-color">
                         </div>
                      </div>
@@ -67,69 +70,81 @@
                             <option value="multiply">Multiplicar</option>
                         </select>
                     </div>
-            
+                </div>   
+                
                      <div class="control-panel-filters">
-                         <h3 class="control-panel-filters-title-">Filtros</h3>
+                         <h3 class="control-panel-tittle">Filtros</h3>
                             <div class="control-panel-side">
                                 <label for="bright-slide">BRILLO</label>
-                                 <input type="range" id="bright-slide">
+                                <br>
+                                 <input type="range" id="bright-slide" class="slider">
                             </div>
             
                     <div class="control-panel-side">
                             <label for="opacity-slide">OPACIDAD</label>
-                             <input type="range" id="opacity-slide">
+                            <br>
+                             <input type="range" id="opacity-slide" class="slider">
                      </div>
             
                     <div class="control-panel-side">
                              <label for="contrast-slide">CONTRASTE</label>
-                             <input type="range" id="contrast-slide">
+                             <br>
+                             <input type="range" id="contrast-slide" class="slider">
                     </div>
             
                     <div class="control-panel-side">
                             <label for="blur-slide">DESENFOQUE</label>
-                             <input type="range" id="blur-slide">
+                            <br>
+                             <input type="range" id="blur-slide" class="slider">
                     </div>
             
                     <div class="control-panel-side">
                             <label for="grayscale-slide">ESCALA DE GRISES</label>
-                             <input type="range" id="grayscale-slide">
+                            <br>
+                             <input type="range" id="grayscale-slide" class="slider">
                     </div>
             
                      <div class="control-panel-side">
                              <label for="sepia-slide">SEPIA</label>
-                             <input type="range" id="sepia-slide">
+                             <br>
+                             <input type="range" id="sepia-slide" class="slider">
                     </div>
             
                     <div class="control-panel-side">
                             <label for="hue-slide">HUE</label>
-                             <input type="range" id="hue-slide">
+                            <br>
+                             <input type="range" id="hue-slide" class="slider">
                      </div>
             
                     <div class="control-panel-side">
                             <label for="saturate-slide">SATURADO</label>
-                            <input type="range" id="saturate-slide">
+                            <br>
+                            <input type="range" id="saturate-slide" class="slider">
                     </div>
             
                     <div class="control-panel-side">
                             <label for="negative-slide">NEGATIVO</label>
-                            <input type="range" id="negative-slide">
+                            <br>
+                            <input type="range" id="negative-slide" class="slider">
                     </div>
             
                     </div>
-            
-                    <button class="button-restore">REESTABLECER FILTROS</button>
-            
+
+                    <div class="button-restore-container">
+                        <button class="button-restore">REESTABLECER FILTROS</button>
+                    </div>
+
                 </section>
                     
                                 <!-- Panel estilos de texto -->
             
-                    <section class="section-panel-text">
+                    <section class="section-panel-text" >
                         <h2 class="tittle-panel-text">TEXTO</h2>
             
                         <div class="control-panel-text">
                             <h3 class="control-panel-tittle">SUPERIOR</h3>
-                            <label for="top-text">TOP TEXT</label>
-                            <textarea name="top-text" id="top-text" ></textarea>
+                            <label for="top-text"></label>
+                            <textarea name="top-text" id="top-text" >TOP TEXT</textarea>
                             <div>
                                 <input id="top-check" type= "checkbox">
                                 <label for="top-check">Sin texto superior</label>
@@ -138,11 +153,13 @@
             
                         <div class="control-panel-text">
                             <h3 class="control-panel-tittle">INFERIOR</h3>
-                            <label for="top-text">BOTTOM TEXT</label>
-                            <textarea name="top-text" id="top-text" ></textarea>
+                            <label for="top-text"></label>
+                            <textarea name="top-text" id="top-text" class="label-text">BOTTOM TEXT</textarea>
                             <div>
                                 <input id="top-check-2" type= "checkbox">
-                                <label for="top-check-2">Sin texto inferior</label>
+                                <label for="top-check-2" class="label-text">Sin texto inferior</label>
+                                
+                               
                             </div>
                         </div>
             
@@ -162,7 +179,7 @@
                         <input type="number" class="font-size" id="font-size" min="12" value="40">
             
                          <div class="container-button-align">
-                            <button class="button-align "></button>
+                            <button class="button-align"></button>
                             <button class="button-align"></button>
                             <button class="button-align"></button>
                          </div>

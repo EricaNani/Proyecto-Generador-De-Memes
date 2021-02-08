@@ -4,6 +4,13 @@
     padding: 0;
 }
 
+body {
+    height: 100vh;
+}
+
+
+/*css del nav*/
+
 .all-container {
     background-color: royalblue;
 }
@@ -98,10 +105,97 @@
 
 
 
-.panel-image {
+.panel-image, .section-panel-text {
     float: right;
-    position: fixed;
     right: 0;
     top: 0;
-    margin: 5%;
+    position: fixed;
+    background-color: rgb(170, 174, 179);
+    height: 100vh;
+    padding: .3rem;
+    width: 20%;
+}
+
+/*css de panel de texto*/
+
+.control-panel-tittle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    width: 100%;
+    margin-top: .5rem;
+}
+
+.label.text {
+    border: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: transparent;
+    display: block;
+    outline: 0;
+}
+
+button {
+
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+        border-radius: var(--border-radius);
+        transition: background-color 0.2s;
+        font-size: 14px;
+        cursor: pointer;
+}
+
+.container-button-align {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-button-outline {
+    display: flex;
+    flex-direction: row;
+}
+
+.tittle-panel-image {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.control-panel-input-url {
+    height: 1.6rem;
+    width: 80%;
+    border: none;
+}
+
+.control-panel-input-color, .control-panel-input-blendmode {
+    height: 1.8rem;
+    margin-top: .5rem;
+
+}
+
+.control-panel-side {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.slider {
+    width: 80%;
+    margin: .5rem 0;
+}
+
+.button-restore {
+    font-family: 'Open Sans', sans-serif;
+    padding: .3rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.button-restore-container {
+    justify-content: center;
+    align-items: center;
 }
