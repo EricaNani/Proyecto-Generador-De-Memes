@@ -12,49 +12,54 @@ body {
 /*css del nav*/
 
 .all-container {
-    background-color: royalblue;
+    background-color:#30343F;
 }
 
 .header {
-    background-color: salmon;
+    background-color: #191E2B;
 }
 
 .nav-buttons {
-    background-color: rgb(114, 255, 71);
+    background-color: #191E2B;
 }
 
 .nav-tittle {
-    background-color: violet;
+    background-color: #191E2B;
     font-family: 'Open Sans', sans-serif;
     font-size: 36px;
     font-weight: 600;
     display: flex;
     justify-content: center;
+    margin-bottom: 2px;
+    color: white;
 }
 
 .button-image, .button-text, .button-darkmode {
-    background-color: orangered;
+    background-color: #191E2B;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-weight: 400;
     margin-right: 20px;
     width: 10%;
+    color: white;
+    border: none;
 }
 
-.button-image, .button-text, .button-darkmode:hover {
+.button-image:hover, .button-text:hover, .button-darkmode:hover {
     cursor: pointer;
+    background-color: #4E78BA;
 }
 
 
 .buttons-nav {
-    background-color: paleturquoise;
+    background-color: #191E2B;
     display: flex;
     justify-content: center;
     height: 5vh;
 }
 
 .container-section {
-    background-color: pink;
+    background-color: #30343F;
     height: 100vh;
     /*width: 60%;*/
     padding-left: 30%;
@@ -65,7 +70,7 @@ body {
 }
 
 .top-text { 
-    background-color: seagreen;
+    background-color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 25px;
     font-weight: 800;
@@ -78,13 +83,13 @@ body {
 }
 
 .center-text {
-    background-color: slateblue;
+    background-color: black;
     height: 65vh;
     width: 620px;
 }
 
 .bottom-text {
-    background-color: turquoise;
+    background-color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 25px;
     font-weight: 800;
@@ -98,7 +103,6 @@ body {
 
 .container-buttons-nav {
     margin-top: -150px;
-    background-color: yellow;
     width: 80%;
     height: 80vh;
 }
@@ -110,7 +114,7 @@ body {
     right: 0;
     top: 0;
     position: fixed;
-    background-color: rgb(170, 174, 179);
+    background-color: #252935;
     height: 100vh;
     padding: .3rem;
     width: 20%;
@@ -125,6 +129,7 @@ body {
     margin-bottom: 8px;
     width: 100%;
     margin-top: .5rem;
+    color: white;
 }
 
 .label.text {
@@ -163,6 +168,7 @@ button {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-weight: 700;
+    color: white;
 }
 
 .control-panel-input-url {
@@ -193,9 +199,34 @@ button {
     padding: .3rem;
     text-align: center;
     justify-content: center;
+    background-color: #4E5565;
+    color: white;
 }
 
 .button-restore-container {
     justify-content: center;
     align-items: center;
+}
+
+.tittle-panel-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+span {
+    color: white;
+}
+
+.button-outline {
+    border-radius: 4px;
+    color: white;
+    background-color:  #4E5565;
+    margin: .3rem 0;
+    margin-right: .2rem;
 }
