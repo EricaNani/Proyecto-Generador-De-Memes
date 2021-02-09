@@ -230,3 +230,37 @@ span {
     margin: .3rem 0;
     margin-right: .2rem;
 }
+
+.button-align {
+    border-radius: 4px;
+    background-color:  #4E5565;
+    margin: .3rem 0;
+}
+
+.fa-align-left, .fa-align-center, .fa-align-right {
+    color: white;
+}
+
+.font-size, .control-panel-font {
+    width: 80%;
+    height: 1.8rem;
+    margin: .4rem 0;
+}
+
+textarea {
+    height: 3rem;
+    width: 80%;
+}
+
+.control-panel-input {
+    height: 1.8rem;
+    width: 80%;
+}
+
+.check-transparent {
+    margin-top: .4rem;
+}
+
+.section-panel-text {
+    display: inline;
+}
