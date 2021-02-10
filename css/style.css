@@ -8,6 +8,15 @@ body {
     height: 100vh;
 }
 
+/*:root {
+    --fondoPrimario:  #ffffff; 
+    --fondoSecundario: #F6F7FB;
+    --pink: #c62a88;
+    --green: #ccf6c8;
+    --black:rgb(0, 0, 0);
+    --pinkSecundario: #ffb6c1;
+    --greenSecundario: #91d18b ;
+}*/
 
 /*css del nav*/
 
@@ -15,8 +24,13 @@ body {
     background-color:#30343F;
 }
 
+.all-container-dark {
+    background-color: red;
+}
+
+
 .header {
-    background-color: #191E2B;
+   background-color: #191E2B;
 }
 
 .nav-buttons {
@@ -263,4 +277,12 @@ textarea {
 
 .section-panel-text {
     display: inline;
+}
+
+.caja {
+    display: none;
+}
+
+.caja-2:hover {
+    cursor: pointer;
 }
