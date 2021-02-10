@@ -48,7 +48,7 @@ body {
     color: white;
 }
 
-.button-image, .button-text, .button-darkmode {
+.button-image, .button-text, .button-darkMode {
     background-color: #191E2B;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
@@ -59,7 +59,15 @@ body {
     border: none;
 }
 
-.button-image:hover, .button-text:hover, .button-darkmode:hover {
+.button-darkMode {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1px;
+}
+
+.button-image:hover, .button-text:hover, .button-darkMode:hover {
     cursor: pointer;
     background-color: #4E78BA;
 }
