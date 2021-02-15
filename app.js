@@ -58,7 +58,12 @@ const topCheck = document.getElementById('topCheck');
 const checkInferior = document.getElementById('checkInferior');
 const toptextArea = document.getElementById('toptextArea');
 const labelTextArea = document.getElementById('labelTextArea');
-const textareaInferior = document.getElementById('textareaInferior')
+const textareaInferior = document.getElementById('textareaInferior');
+const fontstyleSelect = document.getElementById('fontstyleSelect');
+const fontSize = document.getElementById('fontSize');
+const buttonAlignLeft = document.getElementById('buttonAlignLeft');
+const buttonAlignCenter = document.getElementById('buttonAlignCenter');
+const buttonAlignRight = document.getElementById('buttonAlignRight');
 // cambio de panel
 
 
@@ -170,3 +175,28 @@ buttonImage.addEventListener('click', () => {
 textareaInferior.addEventListener ('keyup', () => {
    bottomText.innerHTML = textareaInferior.value;
 });
+
+fontstyleSelect.addEventListener('change', () => {
+   topText.style.fontFamily = `${fontstyleSelect.value}`;
+   bottomText.style.fontFamily = `${fontstyleSelect.value}`;
+})
+
+fontSize.addEventListener('change', () => {
+   topText.style.fontSize = `${fontSize.value}px`;
+   bottomText.style.fontSize = `${fontSize.value}px`;
+})
+
+buttonAlignLeft.addEventListener('click', () => {
+   topText.style.textAlign = 'left';
+   bottomText.style.textAlign = 'left';
+})
+
+buttonAlignCenter.addEventListener('click', () => {
+   topText.style.textAlign = 'center';
+   bottomText.style.textAlign = 'center';
+})
+
+buttonAlignRight.addEventListener('click', () => {
+   topText.style.textAlign = 'right';
+   bottomText.style.textAlign = 'right';
+})
