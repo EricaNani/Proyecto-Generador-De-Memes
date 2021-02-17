@@ -64,6 +64,8 @@ const fontSize = document.getElementById('fontSize');
 const buttonAlignLeft = document.getElementById('buttonAlignLeft');
 const buttonAlignCenter = document.getElementById('buttonAlignCenter');
 const buttonAlignRight = document.getElementById('buttonAlignRight');
+const colorTextInput = document.getElementById('colorTextInput');
+const colorBackgroundTextInput = document.getElementById('colorBackgroundTextInput');
 // cambio de panel
 
 
@@ -187,6 +189,7 @@ fontSize.addEventListener('change', () => {
 })
 
 buttonAlignLeft.addEventListener('click', () => {
+   console.log('buttonAlignLeft')
    topText.style.textAlign = 'left';
    bottomText.style.textAlign = 'left';
 })
@@ -199,4 +202,24 @@ buttonAlignCenter.addEventListener('click', () => {
 buttonAlignRight.addEventListener('click', () => {
    topText.style.textAlign = 'right';
    bottomText.style.textAlign = 'right';
+})
+
+colorTextInput.addEventListener('input', () => {
+   topText.style.color = `${colorTextInput.value}`;
+   bottomText.style.color = `${colorTextInput.value}`
+})
+
+colorBackgroundTextInput.addEventListener('input', () => {
+   topText.style.backgroundColor = `${colorBackgroundTextInput.value}`;
+   bottomText.style.backgroundColor = `${colorBackgroundTextInput.value}`
+})
+
+topCheckTransparent.addEventListener('change', () => {
+   if(topCheckTransparent.checked){
+      topText.style.backgroundColor = 'transparent';
+      bottomText.style.backgroundColor = 'transparent';
+   } else{
+      topText.style.backgroundColor = `${topCheckTransparent.value}`;
+      bottomText.style.backgroundColor = `${topCheckTransparent.value}`
+   }
 })
