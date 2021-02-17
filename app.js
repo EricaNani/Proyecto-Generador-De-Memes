@@ -40,7 +40,7 @@ const tittlePanelEspaciado = document.getElementById('tittlePanelEspaciado');
 const tittlePanelInterlineado = document.getElementById('tittlePanelInterlineado');
 const tittleValueColor = document.getElementById('tittleValueColor');
 const tittleValueFondo = document.getElementById('tittleValueFondo');
-const topCheckTransparent = document.getElementById('topCheckTransparent');
+// const topCheckTransparent = document.getElementById('topCheckTransparent');
 const sinTextoSuperior = document.getElementById('sinTextoSuperior');
 const sinTextoInferior = document.getElementById('sinTextoInferior');
 const tittlePanelImage = document.getElementById('tittlePanelImage');
@@ -54,6 +54,8 @@ const tittleDesenfoque = document.getElementById('tittleDesenfoque');
 const tittleEscalaGrises = document.getElementById('tittleEscalaGrises');
 const tittleSepia = document.getElementById('tittleSepia');
 const tittleHue = document.getElementById('tittleHue');
+const tittleSaturado = document.getElementById('tittlesaturado');
+const tittleNegativo = document.getElementById('tittleNegativo');
 const topCheck = document.getElementById('topCheck');
 const checkInferior = document.getElementById('checkInferior');
 const toptextArea = document.getElementById('toptextArea');
@@ -66,6 +68,16 @@ const buttonAlignCenter = document.getElementById('buttonAlignCenter');
 const buttonAlignRight = document.getElementById('buttonAlignRight');
 const colorTextInput = document.getElementById('colorTextInput');
 const colorBackgroundTextInput = document.getElementById('colorBackgroundTextInput');
+const topCheckTransparent = document.getElementById('top-check-transparent');
+const contrastSlide = document.getElementById('contrast-slide');
+const controlPanelInputColorImage = document.getElementById('controlPanelInputColorImage');
+const brightSlide = document.getElementById('bright-slide');
+const opacitySlide = document.getElementById('opacity-slide');
+const blurSlide = document.getElementById('blur-slide');
+const sepiaSlide = document.getElementById('sepia-slide');
+const hueSlide = document.getElementById('hue-slide');
+const saturateSlide = document.getElementById('saturate-slide');
+const negativeSlide = document.getElementById('negative-slide');
 // cambio de panel
 
 
@@ -114,8 +126,15 @@ buttonImage.addEventListener('click', () => {
         panelTittleUrl.style.color = 'black'
         panelTittleFondo.style.color = 'black'
         panelTittleFiltros.style.color = 'black'
-
-
+        tittleBrillo.style.color = 'black'
+        tittleOpacidad.style.color = 'black'
+        tittleContraste.style.color = 'black'
+        tittleDesenfoque.style.color = 'black'
+        tittleEscalaGrises.style.color = 'black'
+        tittleSepia.style.color = 'black'
+        tittleHue.style.color = 'black'
+        tittleSaturado.style.color = 'black'
+        tittleNegativo.style.color = 'black'
      }
      else{
         containerSection.style.backgroundColor = '#30343F'
@@ -150,6 +169,15 @@ buttonImage.addEventListener('click', () => {
         panelTittleUrl.style.color = 'white'
         panelTittleFondo.style.color = 'white'
         panelTittleFiltros.style.color = 'white'
+        tittleBrillo.style.color = 'white'
+        tittleOpacidad.style.color = 'white'
+        tittleContraste.style.color = 'white'
+        tittleDesenfoque.style.color = 'white'
+        tittleEscalaGrises.style.color = 'white'
+        tittleSepia.style.color = 'white'
+        tittleHue.style.color = 'white'
+        tittleSaturado.style.color = 'white'
+        tittleNegativo.style.color = 'white'
      }
  }) ;
 
@@ -190,18 +218,18 @@ fontSize.addEventListener('change', () => {
 
 buttonAlignLeft.addEventListener('click', () => {
    console.log('buttonAlignLeft')
-   topText.style.textAlign = 'left';
-   bottomText.style.textAlign = 'left';
+   topText.style.justifyContent = 'start';
+   bottomText.style.justifyContent = 'start';
 })
 
 buttonAlignCenter.addEventListener('click', () => {
-   topText.style.textAlign = 'center';
-   bottomText.style.textAlign = 'center';
+   topText.style.justifyContent = 'center';
+   bottomText.style.justifyContent = 'center';
 })
 
 buttonAlignRight.addEventListener('click', () => {
-   topText.style.textAlign = 'right';
-   bottomText.style.textAlign = 'right';
+   topText.style.justifyContent = 'flex-end';
+   bottomText.style.justifyContent = 'flex-end';
 })
 
 colorTextInput.addEventListener('input', () => {
@@ -219,7 +247,52 @@ topCheckTransparent.addEventListener('change', () => {
       topText.style.backgroundColor = 'transparent';
       bottomText.style.backgroundColor = 'transparent';
    } else{
-      topText.style.backgroundColor = `${topCheckTransparent.value}`;
-      bottomText.style.backgroundColor = `${topCheckTransparent.value}`
+      topText.style.backgroundColor = `${colorBackgroundTextInput.value}`;
+      bottomText.style.backgroundColor = `${colorBackgroundTextInput.value}`
    }
 })
+
+
+controlPanelInputUrl.addEventListener('keyup', () => {
+   centerText.style.backgroundImage = `url(${controlPanelInputUrl.value})`;
+   centerText.style.backgroundSize = 'cover';
+})
+
+contrastSlide.addEventListener('change', () => {
+   console.log(contrastSlide.value);
+   centerText.style.filter = `grayscale(${contrastSlide.value}%)`;
+})
+
+brightSlide.addEventListener('change', () => {
+   centerText.style.filter = `brightness(${contrastSlide.value}%)`;
+})
+
+blurSlide.addEventListener('change', () => {
+   centerText.style.filter = `blur(${blurSlide.value}px)`
+})
+
+opacitySlide.addEventListener('change', () => {
+   centerText.style.filter = `opacity(${opacitySlide.value})`
+})
+
+sepiaSlide.addEventListener('change', () => {
+   centerText.style.filter = `sepia(${sepiaSlide.value}%)`
+})
+
+hueSlide.addEventListener('change', () => {
+   centerText.style.filter = `hue-rotation(${hueSlide.value}deg)`
+})
+
+saturateSlide.addEventListener('change', () => {
+   centerText.style.filter = `saturate(${saturateSlide.value}%)`
+})
+
+negativeSlide.addEventListener('change', () => {
+   centerText.style.filter = `invert(${negativeSlide.value})`
+})
+
+
+controlPanelInputColorImage.addEventListener('input', () => {
+   centerText.style.backgroundColor = `${controlPanelInputColorImage.value}`;
+})
+
