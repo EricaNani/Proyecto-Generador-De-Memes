@@ -78,67 +78,71 @@ const sepiaSlide = document.getElementById('sepia-slide');
 const hueSlide = document.getElementById('hue-slide');
 const saturateSlide = document.getElementById('saturate-slide');
 const negativeSlide = document.getElementById('negative-slide');
-const spacingInput = document.getElementById('spacing-input')
+const spacingInput = document.getElementById('spacing-input');
+const noOutlineButton = document.getElementById('no-outline-button');
+const lightOutlineButton = document.getElementById('light-outline-button');
+const darkOutlineButton = document.getElementById('dark-outline-button');
 // cambio de panel
 
 
 buttonText.addEventListener('click', () => {
-   sectionPanelImage.style.display = 'none'
-   panelText.style.display = 'inline' 
+   sectionPanelImage.style.display = 'none';
+   panelText.style.display = 'inline' ;
 })
 
 buttonImage.addEventListener('click', () => {
-    panelText.style.display = 'none'
-    sectionPanelImage.style.display = 'inline' 
+    panelText.style.display = 'none';
+    sectionPanelImage.style.display = 'inline' ;
  })
 
  buttonDarkMode.addEventListener('click', () => {
      if(buttonDarkMode.checked) {
-        containerSection.style.backgroundColor = '#EEEEEE'
-        navButtons.style.backgroundColor = '#E0E0E0'
-        buttonsNav.style.backgroundColor = '#E0E0E0'
-        navTittle.style.backgroundColor = '#E0E0E0'
-        panelText.style.backgroundColor = '#FAFAFA'
-        sectionPanelImage.style.backgroundColor = '#FAFAFA'
-        panel.style.backgroundColor = '#FAFAFA'
-        buttonRestore.style.backgroundColor = '#BDBDBD'
-        tittlePanel.style.color = 'black'
-        tittlePanelInferior.style.color = 'black'
-        tittlePanelSuperior.style.color = 'black'
-        tittlePanelFuente.style.color = 'black'
-        tittlePanelColor.style.color = 'black'
-        tittlePanelFondo.style.color = 'black'
-        tittlePanelContorno.style.color = 'black'
-        tittlePanelEspaciado.style.color = 'black'
-        tittlePanelInterlineado.style.color = 'black'
-        navTittle.style.color = 'black'
-        tittleValueColor.style.color = 'black'
-        tittleValueFondo.style.color = 'black'
-        topCheckTransparent.style.color = 'black'
-        sinTextoInferior.style.color = 'black'
-        sinTextoSuperior.style.color = 'black'
-        buttonImage.style.backgroundColor = '#E0E0E0'
-        buttonImage.style.color = 'black'
-        buttonText.style.backgroundColor = '#E0E0E0'
-        buttonText.style.color = 'black'
-        buttonDarkMode.style.backgroundColor = '#E0E0E0'
-        buttonDarkMode.style.color = 'black'
-        tittlePanelImage.style.color = 'black'
-        panelTittleUrl.style.color = 'black'
-        panelTittleFondo.style.color = 'black'
-        panelTittleFiltros.style.color = 'black'
-        tittleBrillo.style.color = 'black'
-        tittleOpacidad.style.color = 'black'
-        tittleContraste.style.color = 'black'
-        tittleDesenfoque.style.color = 'black'
-        tittleEscalaGrises.style.color = 'black'
-        tittleSepia.style.color = 'black'
-        tittleHue.style.color = 'black'
-        tittleSaturado.style.color = 'black'
-        tittleNegativo.style.color = 'black'
-        buttonRestore.style.backgroundColor = '#BDBDBD'
-        buttonRestore.style.color = 'black'
-        topCheckTransparent.style.color = 'white'
+        containerSection.style.backgroundColor = '#EEEEEE';
+        navButtons.style.backgroundColor = '#E0E0E0';
+        buttonsNav.style.backgroundColor = '#E0E0E0';
+        navTittle.style.backgroundColor = '#E0E0E0';
+        panelText.style.backgroundColor = '#FAFAFA';
+        sectionPanelImage.style.backgroundColor = '#FAFAFA';
+        panel.style.backgroundColor = '#FAFAFA';
+        buttonRestore.style.backgroundColor = '#BDBDBD';
+        tittlePanel.style.color = 'black';
+        tittlePanelInferior.style.color = 'black';
+        tittlePanelSuperior.style.color = 'black';
+        tittlePanelFuente.style.color = 'black';
+        tittlePanelColor.style.color = 'black';
+        tittlePanelFondo.style.color = 'black';
+        tittlePanelContorno.style.color = 'black';
+        tittlePanelEspaciado.style.color = 'black';
+        tittlePanelInterlineado.style.color = 'black';
+        navTittle.style.color = 'black';
+        tittleValueColor.style.color = 'black';
+        tittleValueFondo.style.color = 'black';
+        topCheckTransparent.style.color = 'black';
+        sinTextoInferior.style.color = 'black';
+        sinTextoSuperior.style.color = 'black';
+        buttonImage.style.backgroundColor = '#E0E0E0';
+        buttonImage.style.color = 'black';
+        buttonText.style.backgroundColor = '#E0E0E0';
+        buttonText.style.color = 'black';
+        buttonDarkMode.style.backgroundColor = '#E0E0E0';
+        buttonDarkMode.style.color = 'black';
+        tittlePanelImage.style.color = 'black';
+        panelTittleUrl.style.color = 'black';
+        panelTittleFondo.style.color = 'black';
+        panelTittleFiltros.style.color = 'black';
+        tittleBrillo.style.color = 'black';
+        tittleOpacidad.style.color = 'black';
+        tittleContraste.style.color = 'black';
+        tittleDesenfoque.style.color = 'black';
+        tittleEscalaGrises.style.color = 'black';
+        tittleSepia.style.color = 'black';
+        tittleHue.style.color = 'black';
+        tittleSaturado.style.color = 'black';
+        tittleNegativo.style.color = 'black';
+        buttonRestore.style.backgroundColor = '#BDBDBD';
+        buttonRestore.style.color = 'black';
+        topCheckTransparent.style.color = 'white';
+       
      }
      else{
         containerSection.style.backgroundColor = '#30343F'
@@ -329,3 +333,27 @@ const buttonDownload = document.getElementById('buttonDownload');
             saveAs(blob, 'meme.png');
         });
     }
+
+noOutlineButton.addEventListener('click', (e) =>{
+   e.preventDefault();
+   topText.classList.remove('light-contour');
+   topText.classList.remove('dark-contour');
+   bottomText.remove('light-contour');
+   bottomText.remove('dark-contour');
+})
+
+lightOutlineButton.addEventListener('click', (e) =>{
+   e.preventDefault();
+   topText.classList.add('light-contour');
+   topText.classList.add('dark-contour');
+   bottomText.remove('light-contour');
+   bottomText.remove('dark-contour');
+})
+
+darkOutlineButton.addEventListener('click', (e) =>{
+   e.preventDefault();
+   topText.classList.add('light-contour');
+   topText.classList.add('dark-contour');
+   bottomText.remove('light-contour');
+   bottomText.remove('dark-contour');
+})

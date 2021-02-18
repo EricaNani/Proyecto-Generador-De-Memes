@@ -302,3 +302,11 @@ textarea {
    background-color: #1B5E20;
    color: white;
 }
+
+.light-contour {
+    -webkit-text-stroke: 1.5px white;
+}
+
+.dark-contour {
+    -webkit-text-stroke: 3px black;
+}
