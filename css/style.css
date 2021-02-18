@@ -294,3 +294,11 @@ textarea {
 .caja-2:hover {
     cursor: pointer;
 }
+
+.button-download {
+   width: 20%;
+   margin-top: 2%;
+   margin-left: 26%;
+   background-color: #1B5E20;
+   color: white;
+}

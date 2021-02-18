@@ -12,7 +12,7 @@ const buttonWhitemode = document.getElementById('buttonWhitemode');
 const navTittle = document.getElementById('navTittle');
 
 const containerSection = document.getElementById('container-section');
-const containerButtonsNav = document.getElementById('containerButtonsNav');
+//const containerButtonsNav = document.getElementById('containerButtonsNav');
 const topText = document.getElementById('topText');
 const centerText = document.getElementById('centerText');
 const bottomText = document.getElementById('bottomText');
@@ -138,6 +138,7 @@ buttonImage.addEventListener('click', () => {
         tittleNegativo.style.color = 'black'
         buttonRestore.style.backgroundColor = '#BDBDBD'
         buttonRestore.style.color = 'black'
+        topCheckTransparent.style.color = 'white'
      }
      else{
         containerSection.style.backgroundColor = '#30343F'
@@ -183,6 +184,7 @@ buttonImage.addEventListener('click', () => {
         tittleNegativo.style.color = 'white'
         buttonRestore.style.backgroundColor = '#BDBDBD'
         buttonRestore.style.color = 'black'
+        topCheckTransparent.style.color = 'black'
      }
  }) ;
 
@@ -222,8 +224,8 @@ fontSize.addEventListener('change', () => {
 })
 
 spacingInput.addEventListener('change', () => {
-   topText.style.size = `${spacingInput.value}px`;
-   bottomText.style.size = `${spacingInput.value}px`;
+   topText.style.letterSpacing = `${spacingInput.value}px`;
+   bottomText.style.letterSpacing = `${spacingInput.value}px`;
 })
 
 buttonAlignLeft.addEventListener('click', () => {
@@ -306,3 +308,24 @@ controlPanelInputColorImage.addEventListener('input', () => {
    centerText.style.backgroundColor = `${controlPanelInputColorImage.value}`;
 })
 
+buttonRestore.addEventListener('click', (e) => {
+   e.preventDefault()
+   centerText.style.filter = 'invert(0)';
+   centerText.style.filter = 'saturate(0)';
+   centerText.style.filter = 'sepia(0)';
+   centerText.style.filter = 'blur(0)'
+})
+
+const buttonDownload = document.getElementById('buttonDownload');
+    const containerButton = document.getElementById('container-button');
+
+    buttonDownload.addEventListener('click', () => {
+        descargarImagen();
+    })
+
+    const descargarImagen = () => {
+        domtoimage.toBlob(containerButton)
+        .then(function (blob) {
+            saveAs(blob, 'meme.png');
+        });
+    }
