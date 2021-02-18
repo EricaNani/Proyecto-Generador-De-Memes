@@ -54,7 +54,7 @@ const tittleDesenfoque = document.getElementById('tittleDesenfoque');
 const tittleEscalaGrises = document.getElementById('tittleEscalaGrises');
 const tittleSepia = document.getElementById('tittleSepia');
 const tittleHue = document.getElementById('tittleHue');
-const tittleSaturado = document.getElementById('tittlesaturado');
+const tittleSaturado = document.getElementById('tittleSaturado');
 const tittleNegativo = document.getElementById('tittleNegativo');
 const topCheck = document.getElementById('topCheck');
 const checkInferior = document.getElementById('checkInferior');
@@ -78,6 +78,7 @@ const sepiaSlide = document.getElementById('sepia-slide');
 const hueSlide = document.getElementById('hue-slide');
 const saturateSlide = document.getElementById('saturate-slide');
 const negativeSlide = document.getElementById('negative-slide');
+const spacingInput = document.getElementById('spacing-input')
 // cambio de panel
 
 
@@ -135,6 +136,8 @@ buttonImage.addEventListener('click', () => {
         tittleHue.style.color = 'black'
         tittleSaturado.style.color = 'black'
         tittleNegativo.style.color = 'black'
+        buttonRestore.style.backgroundColor = '#BDBDBD'
+        buttonRestore.style.color = 'black'
      }
      else{
         containerSection.style.backgroundColor = '#30343F'
@@ -178,6 +181,8 @@ buttonImage.addEventListener('click', () => {
         tittleHue.style.color = 'white'
         tittleSaturado.style.color = 'white'
         tittleNegativo.style.color = 'white'
+        buttonRestore.style.backgroundColor = '#BDBDBD'
+        buttonRestore.style.color = 'black'
      }
  }) ;
 
@@ -214,6 +219,11 @@ fontstyleSelect.addEventListener('change', () => {
 fontSize.addEventListener('change', () => {
    topText.style.fontSize = `${fontSize.value}px`;
    bottomText.style.fontSize = `${fontSize.value}px`;
+})
+
+spacingInput.addEventListener('change', () => {
+   topText.style.size = `${spacingInput.value}px`;
+   bottomText.style.size = `${spacingInput.value}px`;
 })
 
 buttonAlignLeft.addEventListener('click', () => {
